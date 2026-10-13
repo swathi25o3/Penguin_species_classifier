@@ -55,12 +55,13 @@ An internet connection is needed the first time to download the dataset through 
 | Decision Tree (max_depth=4) | 100% | 96.48% |
 | KNN (k=5, scaled) | 100% | 98.83% |
 
+## Conclusion
 1. Which model performed better?
 On the test set, both models scored 100% (69 of 69 correct), so the single split could not tell them apart.
  In 5-fold cross-validation, KNN averaged 98.83% (+/- 0.58%) and the Decision Tree averaged 96.48% (+/- 1.51%). So KNN performed slightly better and was also more stable across folds, though both models work very well for this problem.
 2. Where did the errors happen?
  There were no errors on the test set: every confusion matrix entry sits on the diagonal. The small gap in cross-validation means a few penguins were misclassified in other splits, most likely Adelie and Chinstrap, which overlap in the pairplot. Gentoo is clearly separated by flipper length and body mass
-3. Conclusion:
+3. What I learnt:
   -> Real datasets have missing values, and checking for them is a necessary first step.
   -> KNN needs feature scaling because it relies on distances; Decision Trees do not.
   -> Decision Trees are easy to interpret (we can see which features matter), while KNN is simple but slower on large data.

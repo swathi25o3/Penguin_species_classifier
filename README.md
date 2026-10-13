@@ -32,8 +32,8 @@ Researchers studying penguins often need to identify species quickly in the fiel
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/swathi25o3/Penguin_species_classifier.git
+cd Penguin_species_classifier
 
 # 2. (Optional) create a virtual environment
 python -m venv venv
